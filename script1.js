@@ -1,22 +1,24 @@
+//Sparar url som en const för att anropa via fetch smidigt. Funktionen hämtar info från api och skapar en lista. Varje rad läggs till med namn och förnamn i listan som options. 
 const api_url = ('https://cgi-osd-kodtest-default-rtdb.europe-west1.firebasedatabase.app/businessCards.json')
 async function createList() {
     const response = await fetch(api_url);
     const data = await response.json()
-    let selects = document.getElementById("selectPerson");
-    for (var name in data) {
-        var option = document.createElement("option")
+    let listOptions = document.getElementById("selectPerson");
+    for (let name in data) {
+        let option = document.createElement("option")
         const j = name
         option.text = data[j].name + ' ' + data[j].surName;
         option.value = j
-        selects.add(option);
+        listOptions.add(option);
 
     }
 }
 createList();
-
+// Data hämtas från api:n som tidigare. Indexen av personen laddas in som variabel i, som sedan används för att hämta data från api:n. All info skrivs ut i tabell via html-id:et. 
+// För att ladda ny bild för varje nytt val används "new Date().getTime", det görs för att lägga till en tidpunkt, så att varje url blir unik. 
 async function getapi() {
-    var select = document.getElementById("selectPerson");
-    var i = select.options[select.selectedIndex].value
+    let person = document.getElementById("selectPerson");
+    let i = person.options[person.selectedIndex].value
 
     const response = await fetch(api_url);
     const data = await response.json()

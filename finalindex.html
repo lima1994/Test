@@ -15,6 +15,7 @@
             border-collapse: collapse;
         }
 
+        /* Färgar varannan column i önskad färg */
         tr:nth-child(even) {
             background-color: rgba(196, 194, 194, 0.781);
         }
@@ -32,7 +33,7 @@
 </head>
 
 <body>
-
+    <!-- Skapar id för listan och kör funktionen getapi när ett nytt val görs  -->
     <h1>Which person do you wish to contact?</h1>
     <form>
         <select id="selectPerson" onchange="getapi();">
@@ -40,7 +41,10 @@
         </select>
         <br><br>
 
+
+
     </form>
+    <!-- Sätter upp formatet för tabellen. Skapar id för alla datapunkter -->
     <table>
         <th>Visitkort</th>
         <tr>
