@@ -20,11 +20,11 @@ async function getapi() {
 
     const response = await fetch(api_url);
     const data = await response.json()
-    document.getElementById("email").innerHTML = data[i].email
-    document.getElementById("name").innerHTML = data[i].name
-    document.getElementById("surName").innerHTML = data[i].surName
-    document.getElementById("telephone").innerHTML = data[i].telephone
-    document.getElementById("id").innerHTML = data[i].id
+    document.getElementById("email").innerHTML = `Email: ` + data[i].email
+    document.getElementById("name").innerHTML = `Name: ` + data[i].name
+    document.getElementById("surName").innerHTML = `Surname: ` + data[i].surName
+    document.getElementById("telephone").innerHTML = `Telephone: ` + data[i].telephone
+    document.getElementById("id").innerHTML = `Id: ` + data[i].id
     document.getElementById("image").innerHTML = `<img src=${data[i].image + new Date().getTime()}>`
 
 }
