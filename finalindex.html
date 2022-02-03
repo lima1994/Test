@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        table,
+        th,
+        td {
+            text-align: left;
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(196, 194, 194, 0.781);
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Which person do you wish to contact?</h1>
+    <form>
+        <select id="selectPerson" onchange="getapi();">
+            <option>Select person</option>
+        </select>
+        <br><br>
+
+    </form>
+    <table>
+        <th>Visitkort</th>
+        <tr>
+            <td>
+                Name: <p id="name"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Surname: <p id="surName"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Telephone: <p id="telephone"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email: <p id="email"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="image"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="id"></p>
+            </td>
+        </tr>
+    </table>
+    <script src="script1.js">
+    </script>
+</body>
+
+</html>
