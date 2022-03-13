@@ -1,4 +1,4 @@
-# Test CGI Linnea Martinsdotter
+# Test Linnea Martinsdotter
  
 * The goal was to create a webpage for a REST-API. The webpage was supposed to include a table with information about the employees.
 
